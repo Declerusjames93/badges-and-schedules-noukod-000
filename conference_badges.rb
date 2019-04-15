@@ -18,15 +18,15 @@ def assign_rooms(speakers)
   speakers.each_with_index{|speaker,index|
   Room.push("Hello, #{speaker}! You'll be assigned to room #{index + 1}!")
     }
-   return assign
+   return Room
 end
 
 def printer(attendees)
-  batch_badge_creator(attendees).each do |badge|
-    puts badge
+  batch_badge_creator(attendees).each do |name|
+    puts name 
   end
 
-  assign_rooms(attendees).each do |badge|
-    puts badge
+  assign_rooms(attendees).each do |name|
+    puts name
   end
 end
